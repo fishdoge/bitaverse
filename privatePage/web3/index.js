@@ -11,3 +11,9 @@ async function setNFT_ABI(){
 }
 
 setNFT_ABI();
+
+
+async function MintNFT(){
+    await bitaverse.methods.mint().send({from:coinbase,value:web3.utils.toWei('0.088','ether')});
+
+}
