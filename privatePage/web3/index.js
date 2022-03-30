@@ -41,7 +41,7 @@ async function MintNFT(){
 
 async function WhiteListMint(){
 
-    let check = await bitaverse.methods.PartnerOwned(coinbase).call();
+    let check = await bitaverse.methods.WhiteListMint(coinbase).call();
 
 
 
