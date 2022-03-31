@@ -23,6 +23,8 @@ async function setNFT_ABI(){
     $("#NormalRemained").text(normalR.Nomal);
 
 
+    checkFreeMint();
+
 }
 setNFT_ABI();
 
