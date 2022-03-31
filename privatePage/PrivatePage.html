@@ -37,7 +37,7 @@ border-radius: 15px; }
 <style>
 	.button {
 	  background-color: #525552;
-	  border: none;
+	  border: 2px solid black;
 	  color: white;
 	  padding: 15px 32px;
 	  text-align: center;
@@ -47,6 +47,7 @@ border-radius: 15px; }
 	  margin: 4px 2px;
 	  cursor: pointer;
 	  border-radius: 45px;
+
 	}
 	</style>
 	<style id="wp-block-library-inline-css">
@@ -231,7 +232,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 
 
 
-		<div style=" width: 100%;height: 600px;background-color: rgb(122, 110, 110);">
+		<div style=" width: 100%;height: 650px;background-color: rgb(122, 110, 110);">
 			<div style="display: flex;justify-content: center;align-items: center; ">
 				<div style="width: 100%;height: 200px;display: flex;justify-content: center;align-items: center;">
 					<h1 style="color: #000;font-weight:bold;">團隊管理頁面</h1>
@@ -975,28 +976,7 @@ Bitaverse</h3>		</div>
 	setCollent();
 	</script>
 	<script src="web3/index.js"></script>
-	<!-- <script>
-	async function RareMint(){
 
-		let input_address = $("#rareinput").val();
-		console.log(input_address);
-		let nums = await bitaverse.methods.SpecialNFT().call();
-
-		if(nums - 60 != 0){
-			bitaverse.methods.RareNFTmint(input_address).send({from: coinbase, gas: 150000 })
-		}else{
-			return;
-		}
-
-	}
-
-	async function NormalMint(){
-		let input_address = $("#freeInput").val();
-		bitaverse.methods.SponsorAmount(input_address).send({from: coinbase })
-
-	}
-
-</script> -->
 
 
 <link rel="stylesheet" id="e-animations-css" href="https://bitaverse.com.tw/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.5.4" media="all">
