@@ -3,7 +3,7 @@ let Bitaverse_contract
 
 async function setNFT_ABI(){
 
-    Bitaverse_contract= "0x1923342dE639fF40776509B5D6174C087729ba13";
+    Bitaverse_contract= "0x5Bd2FafF632390ce9ddeC86Cb83EDD8B837cD1F8";
 
     bitaverse = await new web3.eth.Contract(BitaverseABI,Bitaverse_contract);
 
@@ -33,9 +33,20 @@ setNFT_ABI();
 
 async function MintNFT(){
     let mintAmount = await bitaverse.methods.total_Mint().call();
+    let personalMint = await bitaverse.methods.NFTSale(coinbase).call();
+
+
     console.log(mintAmount);
-    if(mintAmount < 10000){
-        await bitaverse.methods.mint().send({from:coinbase,value:web3.utils.toWei('0.088','ether')});
+    if(mintAmount < 10000 && personalMint < 100){
+        let mintnum = $("#NFTmintValue").val();
+
+        if((parseInt(personalMint) + parseInt(mintnum)) >100 ){
+            alert("買超過100張額度了");
+
+            return;
+        }
+
+        await bitaverse.methods.mint(mintnum).send({from:coinbase,value:web3.utils.toWei('0.088','ether')*mintnum});
     }else{
         return;
     }
