@@ -15,9 +15,9 @@ for(var a=1;a<=100;a++){
 
     var fileName = String(a);
 
-    var names = 'Bita club #'+a;
+    var names = 'Special card #'+a;
     var description = 'The Bita club member';
-    var image = 'https://fishdoge.github.io/bitaverse/BTS.gif';
+    var image = 'https://fishdoge.github.io/bitaverse/FB_IMG_1565319293980.jpg';
 
 
     var obj = {
@@ -31,7 +31,7 @@ for(var a=1;a<=100;a++){
 
 
 
-    fs.writeFile('./metadata/'+fileName,  JSON.stringify(obj), function (err) {
+    fs.writeFile('./raremetadata/'+fileName,  JSON.stringify(obj), function (err) {
         if (err)
             console.log(err);
         else
