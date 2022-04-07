@@ -39,7 +39,7 @@ async function MintNFT(){
 
     console.log(mintAmount);
 
-    let mintnum = $("#NFTmintValue").val();
+    let mintnum = num;
     if(mintAmount + mintnum < 10000 && personalMint + mintnum < 100){
 
         if((parseInt(personalMint) + parseInt(mintnum)) >100 ){
