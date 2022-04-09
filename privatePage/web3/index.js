@@ -41,7 +41,7 @@ async function MintNFT(){
     console.log(mintAmount);
 
     let mintnum = parseInt(num);
-    if(parseInt(mintAmount) + parseInt(mintnum) < 10000 && parseInt(personalMint) + mintnum < 100){
+    if(parseInt(mintAmount) + parseInt(mintnum) <= 10000 && parseInt(personalMint) + mintnum <= 100){
 
         if((parseInt(personalMint) + parseInt(mintnum)) >100 ){
             alert("買超過100張額度了");
