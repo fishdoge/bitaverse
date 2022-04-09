@@ -3,8 +3,8 @@ let Bitaverse_contract
 
 async function setNFT_ABI(){
 
-    Bitaverse_contract= "0x5Bd2FafF632390ce9ddeC86Cb83EDD8B837cD1F8";
-
+    Bitaverse_contract= "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+    //0x00145e35d3A6D437664784b7CC11e173EE8Cfce3
     bitaverse = await new web3.eth.Contract(BitaverseABI,Bitaverse_contract);
 
     let nums = await bitaverse.methods.SpecialNFT().call();
@@ -36,6 +36,7 @@ async function MintNFT(){
     let mintAmount = await bitaverse.methods.total_Mint().call();
     let personalMint = await bitaverse.methods.NFTSale(coinbase).call();
 
+    return;
 
     console.log(mintAmount);
 
