@@ -1038,9 +1038,9 @@ Bitaverse</h3>		</div>
 		let network = await web3.eth.net.getNetworkType();
 		console.log(network);
 
-		// if(network != 'rinkeby'){
-		// 	alert("請確認使用的是Rinkeby測試網");
-		// }
+		if(network != 'rinkeby'){
+			alert("請確認使用的是Rinkeby測試網");
+		}
 
 	}
 
