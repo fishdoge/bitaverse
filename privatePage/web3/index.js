@@ -36,7 +36,7 @@ async function MintNFT(){
     let mintAmount = await bitaverse.methods.total_Mint().call();
     let personalMint = await bitaverse.methods.NFTSale(coinbase).call();
 
-    //return;
+    return;
 
     console.log(mintAmount);
 
