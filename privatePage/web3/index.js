@@ -3,7 +3,7 @@ let Bitaverse_contract
 
 async function setNFT_ABI(){
 
-    Bitaverse_contract= "0x5FbDB2315678afecb367f032d93F642f64180aa3";
+    Bitaverse_contract= "0xf39F02B3aE3FB936618a3F03AEe9314527a3E6ce";
     //0x00145e35d3A6D437664784b7CC11e173EE8Cfce3
     bitaverse = await new web3.eth.Contract(BitaverseABI,Bitaverse_contract);
 
@@ -59,6 +59,8 @@ async function MintNFT(){
 }
 
 async function WhiteListMint(){
+
+    return;
 
     let check = await bitaverse.methods.WhiteListMint(coinbase).call();
 
