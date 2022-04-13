@@ -73,7 +73,7 @@ async function WhiteListMint(){
         await bitaverse.methods.WhiteListMints().send({from:coinbase});
         window.location.reload();
     }else{
-        alert("抱歉，你不在白名單內");
+        return;
     }
 }
 
