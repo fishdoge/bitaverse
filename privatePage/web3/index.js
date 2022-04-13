@@ -4,7 +4,7 @@ let Bitaverse_contract
 async function setNFT_ABI(){
 
     //Bitaverse_contract= "0xf39F02B3aE3FB936618a3F03AEe9314527a3E6ce";
-    Bitaverse_contract= "0x00145e35d3A6D437664784b7CC11e173EE8Cfce3";
+    Bitaverse_contract= "0xf39F02B3aE3FB936618a3F03AEe9314527a3E6ce";
 
     //0x00145e35d3A6D437664784b7CC11e173EE8Cfce3
     bitaverse = await new web3.eth.Contract(BitaverseABI,Bitaverse_contract);
@@ -35,10 +35,12 @@ setNFT_ABI();
 
 
 async function MintNFT(){
+
+    return;
     let mintAmount = await bitaverse.methods.total_Mint().call();
     let personalMint = await bitaverse.methods.NFTSale(coinbase).call();
 
-    return;
+
 
     console.log(mintAmount);
     getNum();
@@ -63,12 +65,13 @@ async function MintNFT(){
 
 async function WhiteListMint(){
 
-    return;
+    //return;
 
     let check = await bitaverse.methods.WhiteListMint(coinbase).call();
 
     if(check>0){
         await bitaverse.methods.WhiteListMints().send({from:coinbase});
+        window.location.reload();
     }else{
         alert("抱歉，你不在白名單內");
     }
