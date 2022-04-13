@@ -3,7 +3,9 @@ let Bitaverse_contract
 
 async function setNFT_ABI(){
 
-    Bitaverse_contract= "0xf39F02B3aE3FB936618a3F03AEe9314527a3E6ce";
+    //Bitaverse_contract= "0xf39F02B3aE3FB936618a3F03AEe9314527a3E6ce";
+    Bitaverse_contract= "0x00145e35d3A6D437664784b7CC11e173EE8Cfce3";
+
     //0x00145e35d3A6D437664784b7CC11e173EE8Cfce3
     bitaverse = await new web3.eth.Contract(BitaverseABI,Bitaverse_contract);
 
@@ -39,6 +41,7 @@ async function MintNFT(){
     return;
 
     console.log(mintAmount);
+    getNum();
 
     let mintnum = parseInt(num);
     if(parseInt(mintAmount) + parseInt(mintnum) <= 10000 && parseInt(personalMint) + mintnum <= 100){

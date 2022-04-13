@@ -128,31 +128,12 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 		} else {
 				// Code for HttpProvider remains unchanged
 		}
-		function getNum(){
-			document.getElementById('num').innerHTML=num;
-		}
+	function getNum(){
+		num = $("#num").val();
 
-	function minusnum(){
-			if(num>=2 && num<=100){
-				num--;
-				getNum();
-
-			}else{
-				return;
-			}
+		console.log(num);
 	}
 
-	function addnum(){
-			if(num<100){
-				num++;
-
-				getNum();
-
-			}else{
-				return;
-			}
-
-	}
 
 	function onTopClick() {
          window.location.hash = "minttes";
@@ -883,9 +864,7 @@ Bitaverse</h3>		</div>
 							</div>
 							<div style="width: 100%;height: 80px;display: flex;justify-content: center;align-items: center;">
 								<div class="amount">
-									<button  class="button2" onclick="minusnum()" id="btnReduce">-</button>
-									<p id="num" style="font-size: 25px;width: 40px;color: white;">1</p>
-									<button  class="button2" onclick="addnum()" id="btnAdd">+</button>
+									<input size="14" id = "num" value=""></input>
 								</div>
 							</div>
 							<div style="width: 100%;height: 100px;display: flex;justify-content: center;align-items: center;">
